@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'Inventory Management' }}</title>
+    <title>{{ $title ?? 'FNTBD Inventory Management' }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @stack('head')
     @vite('resources/css/app.css')
@@ -31,10 +31,11 @@
             <!-- Logo Section -->
             <div class="flex items-center pl-2.5 mb-8">
                 <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg">
-                    <i class="fas fa-boxes text-blue-600 text-xl"></i>
+                    <img src="/public/fntbd.png">
+                    
                 </div>
                 <div class="ml-3">
-                    <h1 class="text-xl font-bold text-white">Inventory</h1>
+                    <h1 class="text-xl font-bold text-white">FNTBD Inventory</h1>
                     <p class="text-blue-100 text-xs">Management System</p>
                 </div>
             </div>
@@ -50,13 +51,25 @@
                 <li>
                     <a href="{{ route('billables.index') }}" class="flex items-center p-3 text-white rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200 group {{ request()->routeIs('billables.*') ? 'bg-white bg-opacity-20 shadow-lg' : '' }}">
                         <i class="fas fa-receipt w-5 h-5 text-blue-100 group-hover:text-white"></i>
-                        <span class="ml-3 font-medium">Billables</span>
+                        <span class="ml-3 font-medium">Supply</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('consumables.index') }}" class="flex items-center p-3 text-white rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200 group {{ request()->routeIs('consumables.*') ? 'bg-white bg-opacity-20 shadow-lg' : '' }}">
                         <i class="fas fa-shopping-cart w-5 h-5 text-blue-100 group-hover:text-white"></i>
-                        <span class="ml-3 font-medium">Consumables</span>
+                        <span class="ml-3 font-medium">Tools</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="{{ route('consumables.index') }}" class="flex items-center p-3 text-white rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200 group {{ request()->routeIs('consumables.*') ? 'bg-white bg-opacity-20 shadow-lg' : '' }}">
+                        <i class="fas fa-shopping-cart w-5 h-5 text-blue-100 group-hover:text-white"></i>
+                        <span class="ml-3 font-medium">Rollout</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('consumables.index') }}" class="flex items-center p-3 text-white rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200 group {{ request()->routeIs('consumables.*') ? 'bg-white bg-opacity-20 shadow-lg' : '' }}">
+                        <i class="fas fa-shopping-cart w-5 h-5 text-blue-100 group-hover:text-white"></i>
+                        <span class="ml-3 font-medium">Users</span>
                     </a>
                 </li>
             </ul>

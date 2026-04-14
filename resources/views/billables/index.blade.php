@@ -6,7 +6,7 @@
     <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-6 text-white shadow-lg">
         <div class="flex items-center justify-between">
             <div>
-                <h1 class="text-3xl font-bold mb-2 text-white">Billable Movements</h1>
+                <h1 class="text-3xl font-bold mb-2 text-white">Supply Movements</h1>
                 <p class="text-blue-100 text-lg">Manage your billable inventory movements and track billing items</p>
             </div>
             <div class="hidden md:block">

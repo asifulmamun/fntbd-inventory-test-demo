@@ -21,7 +21,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm font-medium text-gray-500 mb-1">Total Billables</p>
+                    <p class="text-sm font-medium text-gray-500 mb-1">Total Supply</p>
                     <p class="text-3xl font-bold text-gray-900">{{ $counts['billables'] }}</p>
                     <p class="text-sm text-green-600 mt-1">
                         <i class="fas fa-arrow-up mr-1"></i>
@@ -38,7 +38,7 @@
         <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="text-sm font-medium text-gray-500 mb-1">Total Consumables</p>
+                    <p class="text-sm font-medium text-gray-500 mb-1">Total Tools</p>
                     <p class="text-3xl font-bold text-gray-900">{{ $counts['consumables'] }}</p>
                     <p class="text-sm text-green-600 mt-1">
                         <i class="fas fa-arrow-up mr-1"></i>

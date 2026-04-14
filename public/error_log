@@ -1,0 +1,6 @@
+[18-Oct-2025 13:31:20 UTC] PHP Warning:  require(/home/visafast/fntbd.nexunix.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/visafast/fntbd.nexunix.com/public/index.php on line 14
+[18-Oct-2025 13:31:20 UTC] PHP Warning:  require(/home/visafast/fntbd.nexunix.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/visafast/fntbd.nexunix.com/public/index.php on line 14
+[18-Oct-2025 13:31:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/visafast/fntbd.nexunix.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/visafast/fntbd.nexunix.com/public/index.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/visafast/fntbd.nexunix.com/public/index.php on line 14

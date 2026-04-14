@@ -554,7 +554,20 @@ class ComposerStaticInit59e187617e06ae56419c9096d889a3bd
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\Api\\AttachmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/AttachmentController.php',
+        'App\\Http\\Controllers\\Api\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/AuthController.php',
+        'App\\Http\\Controllers\\Api\\BillableController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/BillableController.php',
+        'App\\Http\\Controllers\\Api\\ConsumableController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ConsumableController.php',
+        'App\\Http\\Controllers\\Api\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/DashboardController.php',
+        'App\\Http\\Controllers\\Api\\ImportExportController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ImportExportController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Web\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/AuthController.php',
+        'App\\Http\\Controllers\\Web\\BillableWebController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/BillableWebController.php',
+        'App\\Http\\Controllers\\Web\\ConsumableWebController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/ConsumableWebController.php',
+        'App\\Http\\Controllers\\Web\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/DashboardController.php',
+        'App\\Models\\BillableMovement' => __DIR__ . '/../..' . '/app/Models/BillableMovement.php',
+        'App\\Models\\Consumable' => __DIR__ . '/../..' . '/app/Models/Consumable.php',
+        'App\\Models\\Item' => __DIR__ . '/../..' . '/app/Models/Item.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

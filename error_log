@@ -1,0 +1,8 @@
+[18-Oct-2025 13:28:05 UTC] PHP Warning:  require(/home/visafast/fntbd.nexunix.com/vendor/autoload.php): Failed to open stream: No such file or directory in /home/visafast/fntbd.nexunix.com/artisan on line 10
+[18-Oct-2025 13:28:05 UTC] PHP Warning:  require(/home/visafast/fntbd.nexunix.com/vendor/autoload.php): Failed to open stream: No such file or directory in /home/visafast/fntbd.nexunix.com/artisan on line 10
+[18-Oct-2025 13:28:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/visafast/fntbd.nexunix.com/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/visafast/fntbd.nexunix.com/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home/visafast/fntbd.nexunix.com/artisan on line 10
+[18-Oct-2025 13:45:05 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/visafast/fntbd.nexunix.com/vendor/composer/platform_check.php on line 24
+[18-Oct-2025 13:45:11 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.33. in /home/visafast/fntbd.nexunix.com/vendor/composer/platform_check.php on line 24

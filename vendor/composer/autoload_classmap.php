@@ -6,7 +6,20 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Http\\Controllers\\Api\\AttachmentController' => $baseDir . '/app/Http/Controllers/Api/AttachmentController.php',
+    'App\\Http\\Controllers\\Api\\AuthController' => $baseDir . '/app/Http/Controllers/Api/AuthController.php',
+    'App\\Http\\Controllers\\Api\\BillableController' => $baseDir . '/app/Http/Controllers/Api/BillableController.php',
+    'App\\Http\\Controllers\\Api\\ConsumableController' => $baseDir . '/app/Http/Controllers/Api/ConsumableController.php',
+    'App\\Http\\Controllers\\Api\\DashboardController' => $baseDir . '/app/Http/Controllers/Api/DashboardController.php',
+    'App\\Http\\Controllers\\Api\\ImportExportController' => $baseDir . '/app/Http/Controllers/Api/ImportExportController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\Web\\AuthController' => $baseDir . '/app/Http/Controllers/Web/AuthController.php',
+    'App\\Http\\Controllers\\Web\\BillableWebController' => $baseDir . '/app/Http/Controllers/Web/BillableWebController.php',
+    'App\\Http\\Controllers\\Web\\ConsumableWebController' => $baseDir . '/app/Http/Controllers/Web/ConsumableWebController.php',
+    'App\\Http\\Controllers\\Web\\DashboardController' => $baseDir . '/app/Http/Controllers/Web/DashboardController.php',
+    'App\\Models\\BillableMovement' => $baseDir . '/app/Models/BillableMovement.php',
+    'App\\Models\\Consumable' => $baseDir . '/app/Models/Consumable.php',
+    'App\\Models\\Item' => $baseDir . '/app/Models/Item.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
