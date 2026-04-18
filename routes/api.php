@@ -12,6 +12,8 @@ Route::prefix('v1')->group(function () {
     Route::middleware('auth:api')->group(function () {
         // Dashboard
         Route::get('dashboard/summary', [\App\Http\Controllers\Api\DashboardController::class, 'summary']);
+
+        
         // Billables
         Route::get('billables', [\App\Http\Controllers\Api\BillableController::class, 'index']);
         Route::get('billables/{id}', [\App\Http\Controllers\Api\BillableController::class, 'show']);
@@ -35,10 +37,10 @@ Route::prefix('v1')->group(function () {
         Route::get('attachments/{id}/download', [\App\Http\Controllers\Api\AttachmentController::class, 'download']);
 
         // Admin
-        Route::get('users', [\App\Http\Controllers\Api\Admin\UserController::class, 'index']);
-        Route::post('users', [\App\Http\Controllers\Api\Admin\UserController::class, 'store']);
-        Route::get('roles', [\App\Http\Controllers\Api\Admin\RoleController::class, 'index']);
-        Route::post('roles', [\App\Http\Controllers\Api\Admin\RoleController::class, 'store']);
+        // Route::get('users', [\App\Http\Controllers\Api\Admin\UserController::class, 'index']);
+        // Route::post('users', [\App\Http\Controllers\Api\Admin\UserController::class, 'store']);
+        // Route::get('roles', [\App\Http\Controllers\Api\Admin\RoleController::class, 'index']);
+        // Route::post('roles', [\App\Http\Controllers\Api\Admin\RoleController::class, 'store']);
     });
 });
 
