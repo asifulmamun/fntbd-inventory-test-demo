@@ -9,9 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class ToolController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $tools = Tool::orderByDesc('id')->paginate(15);
+        $query = Tool::query();
+
+        if ($search = $request->input('search')) {
+            $query->where('sku', $search)
+                ->orWhere('item_name', 'like', "%$search%");
+        }
+
+        $tools = $query->orderByDesc('id')->paginate(15);
         return view('tools.index', compact('tools'));
     }
 

@@ -28,6 +28,23 @@
         </div>
     </div>
 
+    <!-- Search Form -->
+    <form method="GET" action="{{ route('tools.index') }}" class="flex items-center space-x-2">
+        <input 
+            type="text" 
+            name="search" 
+            value="{{ request('search') }}" 
+            placeholder="SKU, Name" 
+            class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-green-300"
+        >
+        <button 
+            type="submit" 
+            class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold shadow-lg border border-green-700"
+        >
+            Search
+        </button>
+    </form>
+
     <!-- Table -->
     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div class="px-6 py-4 border-b border-gray-200">
