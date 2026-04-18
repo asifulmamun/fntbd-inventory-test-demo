@@ -33,7 +33,7 @@
     </div>
     <div>
         <label class="block text-sm">Quantity</label>
-        <input type="number" name="qty" value="{{ old('qty', $tool->qty) }}" class="w-full border rounded p-2" />
+        <input type="number" name="qty" value="{{ old('qty', $tool->qty) }}" class="w-full border rounded p-2" readonly />
     </div>
     <div class="col-span-2">
         <label class="block text-sm">Remarks</label>
@@ -44,6 +44,28 @@
         <a href="{{ route('tools.index') }}" class="ml-2 text-sm">Cancel</a>
     </div>
 </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const inQtyInput = document.querySelector('input[name="in_qty"]');
+        const outQtyInput = document.querySelector('input[name="out_qty"]');
+        const qtyInput = document.querySelector('input[name="qty"]');
+
+        function updateQty() {
+            const inQty = parseInt(inQtyInput.value) || 0;
+            const outQty = parseInt(outQtyInput.value) || 0;
+            const currentQty = parseInt(qtyInput.dataset.originalQty) || 0;
+            qtyInput.value = currentQty + inQty - outQty;
+        }
+
+        // Store the original qty value for calculations
+        qtyInput.dataset.originalQty = qtyInput.value;
+
+        // Attach event listeners for real-time updates
+        inQtyInput.addEventListener('input', updateQty);
+        outQtyInput.addEventListener('input', updateQty);
+    });
+</script>
 @endsection
 
 
