@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('tools.index') }}" class="flex items-center p-3 text-white rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200 group {{ request()->routeIs('consumables.*') ? 'bg-white bg-opacity-20 shadow-lg' : '' }}">
+                    <a href="{{ route('tools.index') }}" class="flex items-center p-3 text-white rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-200 group {{ request()->routeIs('tools.*') ? 'bg-white bg-opacity-20 shadow-lg' : '' }}">
                         <i class="fas fa-shopping-cart w-5 h-5 text-blue-100 group-hover:text-white"></i>
                         <span class="ml-3 font-medium">Tools</span>
                     </a>
