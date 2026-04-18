@@ -33,7 +33,7 @@
     </div>
     <div>
         <label class="block text-sm">Quantity</label>
-        <input type="number" name="qty" value="{{ old('qty') ?? 0 }}" class="w-full border rounded p-2" readonly />
+        <input type="number" name="qty" value="{{ old('qty') ?? 0 }}" class="w-full border rounded p-2 text-gray-500 border-gray-300" readonly />
     </div>
     <div class="col-span-2">
         <label class="block text-sm">Remarks</label>

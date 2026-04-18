@@ -19,20 +19,7 @@
     <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-filter text-gray-400"></i>
-                    <span class="text-sm text-gray-600">Filter by:</span>
-                </div>
-                <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                    <option>All Status</option>
-                    <option>Active</option>
-                    <option>Inactive</option>
-                </select>
-                <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500">
-                    <option>All Items</option>
-                    <option>Low Stock</option>
-                    <option>Recent</option>
-                </select>
+                
             </div>
             <a href="{{ route('tools.create') }}" class="bg-gradient-to-r from-green-600 to-green-800 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-green-900 transition-all duration-200 shadow-lg hover:shadow-xl border border-green-700">
                 <i class="fas fa-plus mr-2 text-white"></i>

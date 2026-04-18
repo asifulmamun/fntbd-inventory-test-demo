@@ -51,26 +51,17 @@ class ToolController extends Controller
     public function update(Request $request, Tool $tool)
     {
         $data = $request->validate([
-            'date' => ['required','date'],
-            'tool_id' => ['required','string'],
-            'name' => ['required','string'],
-            'manufacturer' => ['nullable','string'],
-            'serial_no' => ['nullable','string'],
-            'fnt_pm' => ['nullable','string'],
-            'vendor_pm' => ['nullable','string'],
-            'dismantle_site_id' => ['nullable','string'],
-            'project_name' => ['nullable','string'],
-            'send_to' => ['nullable','string'],
-            'send_by' => ['nullable','string'],
-            'challan_no' => ['nullable','string'],
-            'receiver' => ['nullable','string'],
-            'uom' => ['nullable','string'],
-            'quantity' => ['required','numeric'],
-            'status' => ['nullable', Rule::in(['active','dismantled','sent'])],
-            'remarks' => ['nullable','string'],
+            'sku' => ['required', 'string'],
+            'item_name' => ['required', 'string'],
+            'unit' => ['required', 'string'],
+            'in_qty' => ['required', 'integer'],
+            'out_qty' => ['required', 'integer'],
+            'qty' => ['r', 'integer'],
+            'remarks' => ['nullable', 'string'],
         ]);
+
         $tool->update($data);
-        return redirect()->route('tools.index')->with('status', 'Updated');
+        return redirect()->route('tools.index');
     }
 
     public function destroy(Tool $tool)
