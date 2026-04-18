@@ -25,15 +25,15 @@
     </div>
     <div>
         <label class="block text-sm">In Quantity</label>
-        <input type="number" name="in_qty" value="{{ old('in_qty', $tool->in_qty) }}" class="w-full border rounded p-2" required />
+        <input type="number" name="in_qty" value="{{ old('in_qty', $tool->in_qty) }}" class="w-full border rounded p-2" min="0" required />
     </div>
     <div>
         <label class="block text-sm">Out Quantity</label>
-        <input type="number" name="out_qty" value="{{ old('out_qty', $tool->out_qty) }}" class="w-full border rounded p-2" required />
+        <input type="number" name="out_qty" value="{{ old('out_qty', $tool->out_qty) }}" class="w-full border rounded p-2" min="0" required />
     </div>
     <div>
         <label class="block text-sm">Quantity</label>
-        <input type="number" name="qty" value="{{ old('qty', $tool->qty) }}" class="w-full border rounded p-2" readonly />
+        <input type="number" name="qty" value="{{ old('qty', $tool->qty) }}" class="w-full border rounded p-2" min="0" required />
     </div>
     <div class="col-span-2">
         <label class="block text-sm">Remarks</label>
@@ -45,6 +45,7 @@
     </div>
 </form>
 
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const inQtyInput = document.querySelector('input[name="in_qty"]');
@@ -54,12 +55,12 @@
         function updateQty() {
             const inQty = parseInt(inQtyInput.value) || 0;
             const outQty = parseInt(outQtyInput.value) || 0;
-            const currentQty = parseInt(qtyInput.dataset.originalQty) || 0;
-            qtyInput.value = currentQty + inQty - outQty;
+            qtyInput.value = inQty - outQty;
+            console.log(`Updated qty: ${qtyInput.value}`); // Debugging
         }
 
-        // Store the original qty value for calculations
-        qtyInput.dataset.originalQty = qtyInput.value;
+        // Ensure qty field remains readonly
+        qtyInput.addEventListener('focus', (e) => e.target.blur());
 
         // Attach event listeners for real-time updates
         inQtyInput.addEventListener('input', updateQty);

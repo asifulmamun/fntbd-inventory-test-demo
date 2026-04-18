@@ -48,15 +48,21 @@ class ToolController extends Controller
         return view('tools.edit', ['tool' => $tool]);
     }
 
-    public function update(Request $request, Tool $tool)
+    public function update(Request $request, $id)
     {
+        $tool = Tool::findOrFail($id); // Fetch the tool by ID or throw a 404 error    
+        
+        if(!$tool) {
+            return redirect()->back()->withErrors(['error' => 'Not found']);
+        }
+        
         $data = $request->validate([
             'sku' => ['required', 'string'],
             'item_name' => ['required', 'string'],
             'unit' => ['required', 'string'],
             'in_qty' => ['required', 'integer'],
             'out_qty' => ['required', 'integer'],
-            'qty' => ['r', 'integer'],
+            'qty' => ['nullable', 'integer'],
             'remarks' => ['nullable', 'string'],
         ]);
 

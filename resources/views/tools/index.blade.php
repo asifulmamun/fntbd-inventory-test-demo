@@ -59,10 +59,10 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $tool->remarks }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                             <div class="flex items-center justify-end space-x-2">
-                                <a href="{{ route('tools.edit', $tool) }}" class="text-blue-600 hover:text-blue-700 p-2 rounded-lg hover:bg-blue-50 transition-colors" title="Edit">
+                                <a href="{{ route('tools.edit', $tool->id) }}" class="text-blue-600 hover:text-blue-700 p-2 rounded-lg hover:bg-blue-50 transition-colors" title="Edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="{{ route('tools.destroy', $tool) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this tool?')">
+                                <form action="{{ route('tools.destroy', $tool->id) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this tool?')">
                                     @csrf @method('DELETE')
                                     <button type="submit" class="text-red-600 hover:text-red-700 p-2 rounded-lg hover:bg-red-50 transition-colors" title="Delete">
                                         <i class="fas fa-trash"></i>
