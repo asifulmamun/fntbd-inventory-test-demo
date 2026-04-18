@@ -79,12 +79,12 @@
                                 <a href="{{ route('tools.edit', $tool->id) }}" class="text-blue-600 hover:text-blue-700 p-2 rounded-lg hover:bg-blue-50 transition-colors" title="Edit">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <form action="{{ route('tools.destroy', $tool->id) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this tool?')">
+                                {{-- <form action="{{ route('tools.destroy', $tool->id) }}" method="POST" class="inline" onsubmit="return confirm('Are you sure you want to delete this tool?')">
                                     @csrf @method('DELETE')
                                     <button type="submit" class="text-red-600 hover:text-red-700 p-2 rounded-lg hover:bg-red-50 transition-colors" title="Delete">
                                         <i class="fas fa-trash"></i>
                                     </button>
-                                </form>
+                                </form> --}}
                             </div>
                         </td>
                     </tr>
